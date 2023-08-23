@@ -23,8 +23,17 @@
 
       // prepare page content
       $data['content'] .= "<table border='1'>";
-      $data['content'] .= "<tr><th colspan='5' align='center'>Modules</th></tr>";
-      $data['content'] .= "<tr><th>Code</th><th>Type</th><th>Level</th></tr>";
+      $data['content'] .= "<tr><th>studentid</th>
+                           <th>password</th>
+                           <th>firstname</th>
+                           <th>lastname</th>
+                           <th>dob</th>
+                           <th>house</th>
+                           <th>town</th>
+                           <th>county</th>
+                           <th>country</th>
+                           <th>postcode</th></tr>";
+
       // Display the modules within the html table
       while($row = mysqli_fetch_array($result)) {
          $data['content'] .="<tr>";
@@ -49,7 +58,7 @@
       //Delte Button
       $data['content'] .= "<input type='submit'name='deletion'
       value='Delete' />";
-      
+
       // render the template
       echo template("templates/default.php", $data);
 
