@@ -8,8 +8,7 @@
 
       echo template("templates/partials/header.php");
       echo template("templates/partials/nav.php");
-
-   }
+   
 
       if (isset($_POST['submit'])) {
 
@@ -27,8 +26,8 @@
       $result = mysqli_query($conn,$sql);
       echo $sql;
          
-   }
-   else {
+
+      else {
       $sql = "select + from student wherestudentid='". $_SESSION['id'] . "';";
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result);
@@ -52,11 +51,14 @@
       <input name="postcode" type="text" value="" /><br/>
       <input type="submit" value="Save" name="submit" />
       </form>
-
+      
       EOD;
+      }
    } else {
       header("Location: index.php");
    }
 
    echo template("templates/partials/footer.php")
+
+}
 ?>
