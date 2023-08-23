@@ -34,25 +34,24 @@
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result);
       $data['content'] = <<<EOD
-      <h2> Add a new student </h2>
-      <form name="frmdetails" actions="" method="post">
-      First Name:
-      <input name="firstname" type="text" value="" /><br/>
-      Surname:
-      <input name="lastname" type="text" value="" /><br/>
-
-      House Number, and Street Name: 
-      <input name="house" type="text" value="" /><br/>
-      Town: 
-      <input name="town" type="text" value="" /><br/>
-      County: 
-      <input name="county" type="text" value="" /><br/>
-      Country:
-      <input name="country" type="text" value="" /><br/>
-      Postcode: 
-      <input name="postcode" type="text" value="" /><br/>
-      <input type="submit" value="Save" name="submit" />
-      </form>
+         <h2> Add a new student </h2>
+         <form name="frmdetails" actions="" method="post">
+         First Name:
+         <input name="firstname" type="text" value="" /><br/>
+         Surname:
+         <input name="lastname" type="text" value="" /><br/>
+         House Number, and Street Name: 
+         <input name="house" type="text" value="" /><br/>
+         Town: 
+         <input name="town" type="text" value="" /><br/>
+         County: 
+         <input name="county" type="text" value="" /><br/>
+         Country:
+         <input name="country" type="text" value="" /><br/>
+         Postcode: 
+         <input name="postcode" type="text" value="" /><br/>
+         <input type="submit" value="Save" name="submit" />
+         </form>
       
       EOD;
       }
