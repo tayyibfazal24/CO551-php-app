@@ -8,7 +8,7 @@
 
       echo template("templates/partials/header.php");
       echo template("templates/partials/nav.php");
-   
+
 
       if (isset($_POST['submit'])) {
 
@@ -23,10 +23,12 @@
                      ('30002'), '3234', '09,03,2002', 'beth'. 'harmony', '11 woodland avenue', 'slough', 'buckinghamshire', 'england', 'SL14DT'),
                      ('30003'), '4234', '18,04,2002', 'aadil'. 'ahmed', '5 farnham road', 'slough', 'buckinghamshire', 'england', 'SL25TY'),
                      ('30004'), '5234', '13,11,2002', 'david'. 'green', '11 godolphin road', 'slough', 'buckinghamshire', 'england', 'SL13DL'),";
-      $result = mysqli_query($conn,$sql);
-      echo $sql;
+                     echo $sql;
+               $result = mysqli_query($conn,$sql);
+      
+               $data['content'] = "<p>student record has been added</p>";
          
-
+      }
       else {
       $sql = "select + from student wherestudentid='". $_SESSION['id'] . "';";
       $result = mysqli_query($conn,$sql);
