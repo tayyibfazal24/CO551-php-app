@@ -9,6 +9,8 @@
       echo template("templates/partials/header.php");
       echo template("templates/partials/nav.php");
 
+   }
+
       if (isset($_POST['submit'])) {
 
          var_dump($_POST);
@@ -52,8 +54,7 @@
       </form>
 
       EOD;
-   }
-   else {
+   } else {
       header("Location: index.php");
    }
 
