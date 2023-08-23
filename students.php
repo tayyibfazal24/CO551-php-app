@@ -27,11 +27,29 @@
       $data['content'] .= "<tr><th>Code</th><th>Type</th><th>Level</th></tr>";
       // Display the modules within the html table
       while($row = mysqli_fetch_array($result)) {
-         $data['content'] .= "<tr><td> $row[modulecode] </td><td> $row[name] </td>";
-         $data['content'] .= "<td> $row[level] </td></tr>";
-      }
-      $data['content'] .= "</table>";
+         $data['content'] .="<tr>";
+         $data['content'] .="<td> $row[studentid] </td>";
+         $data['content'] .="<td> $row[password] </td>";
+         $data['content'] .="<td> $row[firstname] </td>";
+         $data['content'] .="<td> $row[lastname] </td>";
+         $data['content'] .="<td> $row[dob] </td>";
+         $data['content'] .="<td> $row[house] </td>";
+         $data['content'] .="<td> $row[town] </td>";
+         $data['content'] .="<td> $row[county] </td>";
+         $data['content'] .="<td> $row[country] </td>";
+         $data['content'] .="<td> $row[postcode] </td>";
+         $data['content'] .="<td> <input type='checkbox' name='students[]'
+         value= '$row[studentid]'/> </td>";
+         $data['content'] .="</tr>";
 
+      }
+
+      $data['content'] .="</table>";
+
+      //Delte Button
+      $data['content'] .= "<input type='submit'name='deletion'
+      value='Delete' />";
+      
       // render the template
       echo template("templates/default.php", $data);
 
