@@ -53,9 +53,11 @@
 
       $data['content'] .="</table>";
 
-      //Delte Button
+      //Delete Button
       $data['content'] .= "<input type='submit'name='deletion'
       value='Delete' />";
+
+      $data['content'].= "</form>";
 
       // render the template
       echo template("templates/default.php", $data);
