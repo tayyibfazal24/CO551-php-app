@@ -16,8 +16,6 @@
         $sql = "DELETE FROM student WHERE studentid = $value";
         $result = mysqli_query($conn,$sql);
     }
-    
-    
 
     header("Location: students.php");
 
