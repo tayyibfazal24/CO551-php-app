@@ -12,7 +12,7 @@
                    ('30002', '3234', '2002-08-09', 'Beth', 'Harmony', '11 Woodland avenue', 'Slough', 'Buckinghamshire', 'England', 'SL14DT'),
                    ('30003', '4234', '2002-04-19', 'Aadil', 'Ahmed', '5 Farnham road', 'Slough', 'Buckinghamshire', 'England', 'SL25TY'),
                    ('30004', '5234', '2002-11-13', 'David', 'Green', '11 Godolphin road', 'Slough', 'Buckinghamshire', 'England', 'SL13DL')";
-      echo $sql;
+      
       $result = mysqli_query($conn,$sql);
       
          
